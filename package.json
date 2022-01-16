@@ -1,0 +1,29 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "shopping-cart-app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server",
+    "client": "yarn start --prefix frontend",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Santamaria",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "concurrently": "^7.0.0",
+    "dotenv": "^12.0.3",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.1.6",
+    "nodemon": "^2.0.15"
+  }
+}
