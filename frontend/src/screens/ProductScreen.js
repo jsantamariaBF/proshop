@@ -32,7 +32,11 @@ const ProductScreen = () => {
     const addToCartHandler = () => {
         dispatch(addToCart(product._id, qty));
         navigate('/cart');
-    };
+    }
+
+    useEffect(() => {
+       console.log(qty);
+    }, [qty])
 
     return (
         <>
@@ -86,6 +90,7 @@ const ProductScreen = () => {
                                             <Col>
                                                 <Form.Control
                                                     as='select'
+                                                    className='form-select'
                                                     value={qty}
                                                     onChange={(e) => setQty(e.target.value)}
                                                 >
